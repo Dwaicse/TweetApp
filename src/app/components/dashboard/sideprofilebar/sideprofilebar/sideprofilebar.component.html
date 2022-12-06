@@ -1,0 +1,42 @@
+<div class="card" style="width:20rem;padding: 5px;">
+    <div class="card-body">
+      <mat-card class="example-card mat-elevation-z0">
+        <mat-card-header>
+           <mat-card-title></mat-card-title>
+        </mat-card-header>
+        
+          <mat-card-content>
+             
+            <mat-action-list>
+            
+              <ngx-avatar name={{email}} [cornerRadius]="1" [size]="250" [round]="false"></ngx-avatar>
+                 
+             
+             
+               <h2 style="padding-top: 10px;">{{user.name}}</h2>
+               <h3 style="padding-top: 1px;"> {{this.email}}</h3>
+              
+
+               <button mat-list-item 
+            routerLink="/dashboard"><mat-icon style="margin-right: 2px;margin-top: 2px;">home</mat-icon>Home</button>
+
+            
+             <button mat-list-item
+             [routerLink]="'/dashboard/mytweets'"
+             ><mat-icon  style="margin-right: 2px;margin-top: 2px;">message</mat-icon> #MyTweets</button>
+
+             <button mat-list-item
+             [routerLink]="'/dashboard/users'"
+             ><mat-icon  style="margin-right: 2px;margin-top: 2px;">supervised_user_circle</mat-icon> #All Users</button>
+            </mat-action-list>
+           
+           
+            
+            
+                      
+                  
+             
+          </mat-card-content>
+          
+        </mat-card>
+    </div></div>

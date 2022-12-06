@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Edit Tweet</h1>
+
+<div mat-dialog-content>
+
+    <form  >
+
+    <mat-form-field appearance="outline" style="width: 600px;;" >
+            <mat-label>Reply</mat-label>
+            <textarea  matInput
+            [(ngModel)]="tweet_data"
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="5"
+            cdkAutosizeMaxRows="5" name="editbox"
+            ></textarea>
+        
+       </mat-form-field>
+    
+    
+
+    </form>
+    
+
+    </div>
+
+    <div mat-dialog-action [align] = " 'end '">
+         <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+         <button style="margin-left: 8px;margin-right: 8px;" mat-raised-button color="primary"(click)="oneditSubmit()">Update</button>
+        </div>

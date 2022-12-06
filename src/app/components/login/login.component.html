@@ -1,0 +1,187 @@
+
+
+
+<div class="center-content">
+<mat-card class="example-card mat-elevation-z0">
+  <mat-card-header>
+     <mat-card-title>Tweet App</mat-card-title>
+  </mat-card-header>
+  
+    <mat-card-content>
+        <mat-tab-group mat-stretch-tabs="false" dynamicHeight mat-align-tabs="start">
+            <mat-tab label="Login">
+             
+              <form style="margin-top: 35px;" (ngSubmit)="onSubmitLogin()" >
+                <mat-form-field class="example-full-width ">
+                  <mat-label>Email</mat-label>
+                  <input type="email"
+                  [(ngModel)]="loginCredential.email"
+                   matInput [formControl]="emailFormControl"  placeholder="Ex. pat@example.com">
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Password</mat-label>
+                  <input type="password"
+                  [(ngModel)]="loginCredential.password"
+                   matInput [formControl]="passwordFormControl" placeholder="Password">
+                  <mat-error *ngIf="passwordFormControlLogin.hasError('password') && !emailFormControl.hasError('required')">
+                    Please enter a valid password
+                  </mat-error>
+                  <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary">Login</button>
+                <button type="reset" mat-raised-button  color="accent" style="margin-left:10px; ;">RESET</button>
+              </form>
+            </mat-tab>
+
+            <mat-tab label="Register">
+     
+              <form style="margin-top: 35px;" (ngSubmit)="onSubmitRegistration()">
+
+              <mat-form-field class="example-full-width ">
+                <mat-label>Name</mat-label>
+                <input
+                [(ngModel)]="userDetails.name" 
+                type="name" matInput [formControl]="nameFormControl" placeholder="Name">
+                <mat-error *ngIf="nameFormControl.hasError('name') || !nameFormControl.hasError('required')">
+                  Please enter a valid name
+                </mat-error>
+                <mat-error *ngIf="nameFormControl.hasError('required')">
+                  Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+
+
+              <mat-form-field class="example-full-width ">
+                <mat-label>Email</mat-label>
+                <input type="email"
+                [(ngModel)]="userDetails.email" 
+                 matInput 
+                 [formControl]="emailFormControl"
+                  placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') || !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width ">
+                <mat-label>Contact Number</mat-label>
+                <input type="number"
+                [(ngModel)]="userDetails.contact" 
+                 matInput 
+                 [formControl]="contactFormControl"
+                  placeholder="+911234567890">
+                <mat-error *ngIf="contactFormControl.hasError('number') || !contactFormControl.hasError('required')">
+                  Please enter a valid contact number!
+                </mat-error>
+                <mat-error *ngIf="contactFormControl.hasError('required')">
+                  Contact is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password"
+                [(ngModel)]="userDetails.password"  
+                matInput [formControl]="passwordFormControl" placeholder="Password">
+                <mat-error *ngIf="passwordFormControl.hasError('password') || !passwordFormControl.hasError('required')">
+                  Password format is not valid! 
+                  
+        </mat-error>
+
+               
+              
+              
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input type="password"
+                name="confirmpass"
+                [(ngModel)]="confirmpass"
+                [formControl]="confirmpasswordFormControl"
+                matInput  placeholder="Confirm Password">
+               
+                <mat-error *ngIf="!passwordFormControl.hasError('required')">
+                  Confirm Password is Required! 
+                  </mat-error>
+                <mat-error *ngIf="userDetails.password != confirmpass">
+                <strong>  Password not matched !!</strong><br>
+                  
+                </mat-error>
+                
+                
+              
+              </mat-form-field>
+           
+        
+              <mat-card-actions style="margin-top: 35px;">
+                <button type="submit" mat-raised-button color="primary" >Register</button>
+                <button style="margin-left: 20px;" type="reset" mat-raised-button color="accent">Reset</button>
+              </mat-card-actions>
+
+              </form>
+
+
+              <mat-tab label="Forgot Password">
+             
+                <form style="margin-top: 35px;" (ngSubmit)="forgotPassword()" >
+                  <mat-form-field class="example-full-width ">
+                    <mat-label>Email</mat-label>
+                    <input type="email"
+                    [(ngModel)]="loginCredential.email"
+                     matInput [formControl]="emailFormControl"  placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+  
+                  <mat-form-field class="example-full-width">
+                    <mat-label>New Password</mat-label>
+                    <input type="password"
+                    [(ngModel)]="loginCredential.password"
+                     matInput [formControl]="passwordFormControl" placeholder="Password">
+                    <mat-error *ngIf="passwordFormControlLogin.hasError('password') && !emailFormControl.hasError('required')">
+                      Please enter a valid password
+                    </mat-error>
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <button type="submit" mat-raised-button color="primary">RESET</button>
+                  
+                </form>
+              </mat-tab>
+
+
+
+
+
+
+
+
+
+            </mat-tab>
+
+                
+            
+        </mat-tab-group>
+    </mat-card-content>
+    
+  </mat-card>
+  </div>

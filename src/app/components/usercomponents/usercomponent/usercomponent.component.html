@@ -1,0 +1,51 @@
+<app-searchbox (searchTextChanged)="onSearchTextEntered($any($event))"></app-searchbox>
+<div class="card" style="width: 46rem; margin-top: 20px;" *ngFor="let user of user_list ">
+    <div class="card-body">
+      <mat-card class="example-card mat-elevation-z0">
+     
+        
+        <mat-card-content *ngIf="searchText === '' || user.name.toLowerCase().includes(searchText)">
+             
+          <form class="example-form" >
+             
+               <table>
+                   <tr>
+                    <div class="container">
+                        <td style="padding:10px;">
+                          
+                          <ngx-avatar name={{user.name}} [cornerRadius]="1" [size]="100" [round]="false"></ngx-avatar>
+                        </td>
+                        <td>
+                          <tr>
+                            <td>
+                           <h2> {{user.name}}</h2>
+                            
+                          </tr>
+                          <tr>
+                            <h3><strong>@User Id:</strong> {{user.email}}</h3>
+                            </tr>
+                            <tr>
+                                <h3><strong>@User Contact:</strong> {{user.contact}}</h3>
+                                </tr>
+                        </td>
+                    </div>
+                    </tr>
+              
+                  
+                  
+                  
+                  
+                   </table>
+
+                 
+                       
+                  
+           
+                  </form>
+                  
+              
+         
+      </mat-card-content>
+          
+        </mat-card>
+    </div></div>

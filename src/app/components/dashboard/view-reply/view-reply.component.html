@@ -1,0 +1,55 @@
+
+<div  style="font-weight: 700; cursor: pointer;padding: 5px;float:right; "  mat-dialog-action [align] = " 'top'" >
+    <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+   </div>
+
+<div class="table" style="padding: 10px;">
+    
+<h1 mat-dialog-title>Replies!</h1>
+
+    <div class="container">
+<div class="card" style="width: 40rem; margin-top: 20px;" *ngFor="let replies of tweet_row.replies">
+<div class="card-body">
+    <div class="tr">
+    <mat-card class="example-card">
+   <mat-card-content>
+           
+       
+           
+             <table>
+                 <tr>
+                      <td style="padding: 2px;">
+                        
+                        <ngx-avatar name={{replies.emailid}} [cornerRadius]="1" [size]="100" [round]="false"></ngx-avatar>
+                      </td>
+                      <td>
+                        <tr>
+                          <td>
+                         <h3 style="margin-left:5px;"><strong> {{replies.emailid}}</strong></h3>
+                         </td>
+                         <td >
+                          <div class="fill">{{replies.replydate | date:"dd-MMMM-yy , hh:mm:ss"}}</div>
+                         </td>
+                        </tr>
+                        <tr>
+                          <h4 style="margin-left:5px;">{{replies.reply}}</h4>
+                          </tr>
+                      </td>
+                  </tr>
+            
+                
+                
+                
+                
+                 </table>
+                 </mat-card-content>
+                 </mat-card></div>
+             
+                 </div></div>
+               
+
+               </div></div>
+             
+    
+               
+        

@@ -1,0 +1,55 @@
+
+
+
+
+
+
+.center-content{
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+::ng-deep .example-card {
+    max-width: 600px;
+     
+
+      border: 55px solid rgb(59, 48, 162);
+      border-radius: 30px !important;
+      border: rgb(79, 76, 156) !important;
+      background-color: rgb(212, 212, 203);
+    
+    
+  }
+  
+  .example-header-image {
+    
+    background-size: cover;
+  }
+
+
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+
+    
+
+  }
+ 
+
+  .margin-top{
+    margin-top: 100px;
+  }
+  
+
+ 
+
+ 

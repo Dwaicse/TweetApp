@@ -1,0 +1,9 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+.loader-container{
+    position:absolute;
+    width: 100%;
+    z-index: 99;
+}

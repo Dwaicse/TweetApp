@@ -1,0 +1,54 @@
+<div class="card" style="width: 46rem; margin-top: 20px;" *ngFor="let tweet of tweetList">
+    <div class="card-body">
+      <mat-card class="example-card mat-elevation-z0">
+     
+        
+        <mat-card-content>
+             
+          <form class="example-form" >
+             
+               <table>
+                   <tr>
+                    <div class="container">
+                        <td style="padding:10px;">
+                          
+                          <ngx-avatar name={{tweet.email}} [cornerRadius]="1" [size]="100" [round]="false"></ngx-avatar>
+                        </td>
+                        <td>
+                          <tr>
+                            <td>
+                           <h2> {{tweet.email}}</h2>
+                            </td>
+                            <td >
+                              <div class="fill">{{tweet.tweetdate | date:"dd-MMMM-yy , hh:mm:ss"}}</div>
+                             </td>
+                          </tr>
+                          <tr>
+                            <h3>{{tweet.tweetbody}}</h3>
+                            </tr>
+                        </td>
+                    </div>
+                    </tr>
+              
+                  
+                  
+                  
+                  
+                   </table>
+
+                 
+                       
+                  
+           
+                  </form>
+                  <mat-card-actions>
+                    <button type="submit" mat-raised-button color="primary" (click)="openDialog(tweet)" >Edit <mat-icon> border_color</mat-icon></button>
+                    <button style="margin-left: 20px;" mat-raised-button color="accent" (click)="onDelete(tweet.id)" >Delete<mat-icon>delete</mat-icon></button>
+                    <button style="margin-left: 20px;" mat-raised-button color="accent" (click)="openDialogViewReply(tweet)">View Replies {{tweet.replies?.length||0}}<mat-icon>calendar_view_day</mat-icon></button>
+                  </mat-card-actions>
+              
+         
+      </mat-card-content>
+          
+        </mat-card>
+    </div></div>

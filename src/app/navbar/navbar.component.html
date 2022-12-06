@@ -1,0 +1,39 @@
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button
+    *ngIf="loggedIn"
+    [routerLink]="'/dashboard'"
+    class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>home</mat-icon>
+    </button>
+    <span>Tweet App</span>
+    <span class="example-spacer"></span>
+    
+  
+        
+    <button mat-icon-button
+
+    [routerLink]="'/dashboard'"
+
+    *ngIf="loggedIn"
+    class="example-icon favorite-icon mr10 ml10" aria-label="Example icon-button with heart icon">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+   
+    <button
+    *ngIf="loggedIn" 
+    [routerLink]="'/dashboard/mytweets'"
+    mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>question_answer</mat-icon>
+    </button>
+    
+    <button
+    
+    *ngIf="loggedIn" mat-icon-button class="example-icon favorite-icon mr10 ml10" (click)="logoutUser()" 
+
+    mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+   
+
+  </mat-toolbar>

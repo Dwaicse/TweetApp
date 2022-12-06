@@ -1,0 +1,37 @@
+.profile-image{
+    border-radius: 25px;
+    border: 2px solid #694bbb;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+  
+  }
+  .tweet-image{
+    border-radius: 25px;
+    border: 2px solid #694bbb;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+  
+  }
+
+  .container{
+    display: flex;
+  }
+
+  .datediv{
+   flex: 1;
+   text-align: right;
+   justify-content: space-between;
+   
+  }
+  .example-card{
+    display: flex;
+  }
+
+  .fill {
+    flex: 1;
+    position: relative;
+    text-align: right;
+    margin-left: 168px;
+  }
